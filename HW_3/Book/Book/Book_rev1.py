@@ -3,7 +3,6 @@ from calendar import month
 from collections import UserDict
 from datetime import date, datetime, timedelta
 import re
-from flask import Flask
 
 
 class AdressBook(UserDict):
@@ -305,11 +304,8 @@ class Record:
         return 'Good bye!'
 
 
-app = Flask(__name__)
-
-
-@app.route('/')
 def main():
+    print('Welcome!!!')
     while True:
         hello = input('')
         Hello = hello.casefold()
@@ -373,6 +369,4 @@ def main():
 
 
 if __name__ == '__main__':
-    print('Welcome!')
-    app.run(debug=True, host='0.0.0.0')
-    # main()
+    main()
