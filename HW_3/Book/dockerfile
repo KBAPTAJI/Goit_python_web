@@ -6,7 +6,6 @@ COPY . /Book
 
 WORKDIR /Book
 
-RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python"]
-CMD ["Book/Book_rev1.py"]
+CMD ["Book_rev1.py"]
