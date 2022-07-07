@@ -2,7 +2,6 @@ from time import time
 from pathlib import Path
 import sys
 import os
-from threading import Thread
 import shutil
 
 
@@ -30,41 +29,23 @@ def walk_folders(pathroot):
             for name, value in my_directory_files.items():
                 if name == 'изображения' and str(name_file.suffix).casefold() in str(value).casefold():
                     makedir(pathroot, name)
-                    tr_1 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_1.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
                 elif name == 'видео файлы' and str(name_file.suffix).casefold() in str(value).casefold():
                     makedir(pathroot, name)
-                    tr_2 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_2.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
                 elif name == 'документы' and str(name_file.suffix).casefold() in str(value).casefold():
                     makedir(pathroot, name)
-                    tr_3 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_3.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
                 elif name == 'видео файлы' and str(name_file.suffix).casefold() in str(value).casefold():
                     makedir(pathroot, name)
-                    tr_4 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_4.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
                 elif name == 'архивы' and str(name_file.suffix).casefold() in str(value).casefold():
                     makedir(pathroot, name)
-                    tr_5 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_5.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
                     unpackarchive(pathroot, name, name_file)
                 elif name == 'неизвестные расширения':
                     makedir(pathroot, 'неизвестные расширения')
-                    tr_6 = Thread(target=replace_file, args=(
-                        pathroot, name, name_file.name))
-                    tr_6.start()
-                    # replace_file(pathroot, name, name_file.name)
+                    replace_file(pathroot, name, name_file.name)
         else:
             # print(f'{name_file} - папка')
             walk_folders(name_file)
