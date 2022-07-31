@@ -1,0 +1,309 @@
+------teachers------
+
+CREATE TABLE teachers (
+id_teacher INT PRIMARY KEY,
+name_surname VARCHAR(200)
+);
+
+INSERT INTO teachers(id_teacher, name_surname) 
+VALUES(1, 'Елена Владимировна'),
+(2, 'Константин Борисович'),
+(3, 'Максим Андреевич')
+
+
+------Note + date------
+CREATE TABLE notes_1(
+id_note INT PRIMARY KEY,
+note TINYINT UNSIGNED,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_student INT
+);
+CREATE TABLE notes_2(
+id_note INT PRIMARY KEY,
+note TINYINT UNSIGNED,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_student INT
+);
+CREATE TABLE notes_3(
+id_note INT PRIMARY KEY,
+note TINYINT UNSIGNED,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_student INT
+);
+CREATE TABLE notes_4(
+id_note INT PRIMARY KEY,
+note TINYINT UNSIGNED,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_student INT
+);
+CREATE TABLE notes_5(
+id_note INT PRIMARY KEY,
+note TINYINT UNSIGNED,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+id_student INT
+);
+
+INSERT INTO notes_1(id_note, note, id_student) 
+VALUES(1,84,1),(2,76,1),(3,76,1),(4,88,1),(5,61,2),(6,87,2),(7,77,2),(8,65,2),(9,92,3),(10,61,3),(11,78,3),(12,86,3),(13,74,4),(14,70,4),(15,99,4),(16,99,4),(17,60,5),(18,69,5),(19,99,5),(20,70,5),(21,88,6),(22,89,6),(23,85,6),(24,96,6),(25,75,7),(26,71,7),(27,76,7),(28,89,7),(29,63,8),(30,82,8),(31,64,8),(32,78,8),(33,92,9),(34,93,9),(35,74,9),(36,63,9),(37,70,10),(38,65,10),(39,67,10),(40,89,10),(41,100,11),(42,75,11),(43,89,11),(44,70,11),(45,62,12),(46,65,12),(47,90,12),(48,92,12),(49,95,13),(50,63,13),(51,85,13),(52,74,13),(53,85,14),(54,86,14),(55,98,14),(56,84,14),(57,61,15),(58,77,15),(59,71,15),(60,67,15),(61,73,16),(62,85,16),(63,66,16),(64,92,16),(65,87,17),(66,63,17),(67,84,17),(68,92,17),(69,86,18),(70,92,18),(71,77,18),(72,65,18),(73,98,19),(74,68,19),(75,90,19),(76,93,19),(77,77,20),(78,73,20),(79,60,20),(80,71,20),(81,97,21),(82,75,21),(83,69,21),(84,99,21),(85,80,22),(86,85,22),(87,79,22),(88,95,22),(89,89,23),(90,88,23),(91,80,23),(92,98,23),(93,94,24),(94,62,24),(95,69,24),(96,92,24),(97,76,25),(98,82,25),(99,93,25),(100,91,25),(101,79,26),(102,61,26),(103,64,26),(104,85,26),(105,91,27),(106,93,27),(107,93,27),(108,89,27),(109,63,28),(110,95,28),(111,89,28),(112,74,28),(113,74,29),(114,76,29),(115,75,29),(116,61,29),(117,78,30),(118,89,30),(119,75,30),(120,77,30);
+
+INSERT INTO notes_2(id_note, note, id_student) 
+VALUES(1,71,1),(2,95,1),(3,73,1),(4,71,1),(5,73,2),(6,78,2),(7,71,2),(8,69,2),(9,95,3),(10,93,3),(11,98,3),(12,75,3),(13,82,4),(14,70,4),(15,91,4),(16,100,4),(17,73,5),(18,74,5),(19,83,5),(20,60,5),(21,74,6),(22,89,6),(23,65,6),(24,60,6),(25,95,7),(26,66,7),(27,83,7),(28,66,7),(29,80,8),(30,81,8),(31,83,8),(32,64,8),(33,78,9),(34,91,9),(35,86,9),(36,82,9),(37,60,10),(38,62,10),(39,92,10),(40,98,10),(41,97,11),(42,64,11),(43,80,11),(44,94,11),(45,100,12),(46,81,12),(47,79,12),(48,65,12),(49,61,13),(50,77,13),(51,100,13),(52,72,13),(53,92,14),(54,92,14),(55,99,14),(56,88,14),(57,63,15),(58,83,15),(59,92,15),(60,64,15),(61,62,16),(62,93,16),(63,81,16),(64,73,16),(65,79,17),(66,69,17),(67,71,17),(68,78,17),(69,79,18),(70,63,18),(71,97,18),(72,89,18),(73,91,19),(74,84,19),(75,99,19),(76,81,19),(77,69,20),(78,94,20),(79,68,20),(80,73,20),(81,72,21),(82,86,21),(83,88,21),(84,87,21),(85,71,22),(86,99,22),(87,78,22),(88,92,22),(89,75,23),(90,88,23),(91,79,23),(92,69,23),(93,60,24),(94,79,24),(95,99,24),(96,77,24),(97,67,25),(98,81,25),(99,83,25),(100,94,25),(101,75,26),(102,91,26),(103,74,26),(104,62,26),(105,76,27),(106,85,27),(107,91,27),(108,65,27),(109,73,28),(110,74,28),(111,86,28),(112,96,28),(113,91,29),(114,96,29),(115,65,29),(116,68,29),(117,75,30),(118,96,30),(119,88,30),(120,92,30);
+
+INSERT INTO notes_3(id_note, note, id_student) 
+VALUES(1,71,1),(2,69,1),(3,93,1),(4,77,1),(5,90,2),(6,83,2),(7,87,2),(8,76,2),(9,67,3),(10,89,3),(11,68,3),(12,76,3),(13,71,4),(14,66,4),(15,70,4),(16,75,4),(17,91,5),(18,100,5),(19,64,5),(20,83,5),(21,68,6),(22,65,6),(23,67,6),(24,71,6),(25,77,7),(26,89,7),(27,89,7),(28,66,7),(29,88,8),(30,94,8),(31,63,8),(32,71,8),(33,62,9),(34,92,9),(35,61,9),(36,74,9),(37,97,10),(38,97,10),(39,84,10),(40,77,10),(41,93,11),(42,63,11),(43,72,11),(44,89,11),(45,60,12),(46,90,12),(47,64,12),(48,93,12),(49,94,13),(50,65,13),(51,67,13),(52,93,13),(53,84,14),(54,74,14),(55,84,14),(56,77,14),(57,98,15),(58,61,15),(59,100,15),(60,83,15),(61,66,16),(62,96,16),(63,87,16),(64,97,16),(65,96,17),(66,94,17),(67,71,17),(68,80,17),(69,92,18),(70,85,18),(71,75,18),(72,90,18),(73,60,19),(74,75,19),(75,84,19),(76,96,19),(77,64,20),(78,82,20),(79,81,20),(80,72,20),(81,73,21),(82,72,21),(83,89,21),(84,72,21),(85,97,22),(86,95,22),(87,100,22),(88,75,22),(89,76,23),(90,98,23),(91,98,23),(92,74,23),(93,64,24),(94,87,24),(95,62,24),(96,66,24),(97,71,25),(98,60,25),(99,71,25),(100,66,25),(101,92,26),(102,96,26),(103,89,26),(104,73,26),(105,92,27),(106,69,27),(107,93,27),(108,96,27),(109,75,28),(110,78,28),(111,88,28),(112,67,28),(113,82,29),(114,74,29),(115,98,29),(116,65,29),(117,64,30),(118,73,30),(119,86,30),(120,65,30);
+
+INSERT INTO notes_4(id_note, note, id_student) 
+VALUES(1,67,1),(2,61,1),(3,92,1),(4,97,1),(5,72,2),(6,75,2),(7,79,2),(8,83,2),(9,96,3),(10,67,3),(11,67,3),(12,81,3),(13,77,4),(14,92,4),(15,90,4),(16,64,4),(17,70,5),(18,64,5),(19,100,5),(20,73,5),(21,80,6),(22,89,6),(23,78,6),(24,77,6),(25,86,7),(26,61,7),(27,77,7),(28,67,7),(29,88,8),(30,86,8),(31,75,8),(32,79,8),(33,91,9),(34,61,9),(35,100,9),(36,99,9),(37,65,10),(38,79,10),(39,80,10),(40,63,10),(41,85,11),(42,93,11),(43,89,11),(44,84,11),(45,87,12),(46,71,12),(47,61,12),(48,93,12),(49,75,13),(50,63,13),(51,71,13),(52,90,13),(53,66,14),(54,87,14),(55,63,14),(56,69,14),(57,75,15),(58,86,15),(59,79,15),(60,100,15),(61,69,16),(62,83,16),(63,96,16),(64,67,16),(65,69,17),(66,87,17),(67,92,17),(68,85,17),(69,70,18),(70,76,18),(71,73,18),(72,76,18),(73,89,19),(74,75,19),(75,95,19),(76,89,19),(77,94,20),(78,95,20),(79,98,20),(80,74,20),(81,61,21),(82,77,21),(83,90,21),(84,70,21),(85,64,22),(86,81,22),(87,62,22),(88,71,22),(89,80,23),(90,61,23),(91,65,23),(92,81,23),(93,83,24),(94,86,24),(95,84,24),(96,82,24),(97,97,25),(98,91,25),(99,82,25),(100,79,25),(101,98,26),(102,72,26),(103,65,26),(104,98,26),(105,100,27),(106,83,27),(107,74,27),(108,64,27),(109,65,28),(110,76,28),(111,66,28),(112,91,28),(113,60,29),(114,82,29),(115,66,29),(116,61,29),(117,86,30),(118,78,30),(119,60,30),(120,90,30);
+
+INSERT INTO notes_5(id_note, note, id_student) 
+VALUES(1,79,1),(2,86,1),(3,88,1),(4,96,1),(5,96,2),(6,90,2),(7,89,2),(8,96,2),(9,96,3),(10,88,3),(11,98,3),(12,75,3),(13,93,4),(14,87,4),(15,75,4),(16,70,4),(17,77,5),(18,96,5),(19,71,5),(20,100,5),(21,95,6),(22,68,6),(23,100,6),(24,85,6),(25,69,7),(26,82,7),(27,69,7),(28,72,7),(29,91,8),(30,66,8),(31,69,8),(32,88,8),(33,73,9),(34,86,9),(35,91,9),(36,80,9),(37,67,10),(38,62,10),(39,87,10),(40,62,10),(41,66,11),(42,91,11),(43,96,11),(44,77,11),(45,74,12),(46,99,12),(47,60,12),(48,81,12),(49,78,13),(50,84,13),(51,95,13),(52,85,13),(53,74,14),(54,66,14),(55,79,14),(56,96,14),(57,96,15),(58,85,15),(59,90,15),(60,65,15),(61,85,16),(62,72,16),(63,87,16),(64,66,16),(65,75,17),(66,92,17),(67,81,17),(68,96,17),(69,73,18),(70,91,18),(71,60,18),(72,94,18),(73,96,19),(74,75,19),(75,90,19),(76,74,19),(77,67,20),(78,62,20),(79,78,20),(80,77,20),(81,74,21),(82,65,21),(83,80,21),(84,72,21),(85,97,22),(86,65,22),(87,86,22),(88,93,22),(89,83,23),(90,83,23),(91,88,23),(92,69,23),(93,77,24),(94,62,24),(95,70,24),(96,78,24),(97,78,25),(98,76,25),(99,76,25),(100,71,25),(101,78,26),(102,71,26),(103,62,26),(104,97,26),(105,64,27),(106,74,27),(107,72,27),(108,82,27),(109,88,28),(110,88,28),(111,90,28),(112,94,28),(113,89,29),(114,78,29),(115,71,29),(116,62,29),(117,87,30),(118,88,30),(119,65,30),(120,94,30);
+
+
+
+------Courses------
+CREATE TABLE Courses(
+id INT PRIMARY KEY,
+name_sur VARCHAR(100),
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+Teachers_id INT,
+FOREIGN KEY (Teachers_id) REFERENCES teachers (id_teacher)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE
+);
+
+
+------groups------
+
+CREATE TABLE number_groups (
+id INT PRIMARY KEY,
+name_of_group TINYINT UNSIGNED
+);
+
+INSERT INTO number_groups(id_student, name_of_group) VALUES(1, 101)
+
+DROP TABLES number_groups;
+
+------students-----
+
+CREATE TABLE students (
+id_ INT PRIMARY KEY,
+name_sur VARCHAR(200),
+group_id INT,
+courses_id1 INT,
+note_one INT,
+courses_id2 INT,
+note_two INT,
+courses_id3 INT,
+note_three INT,
+courses_id4 INT,
+note_four INT,
+courses_id5 INT,
+note_five INT,
+FOREIGN KEY (group_id) REFERENCES number_groups (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (courses_id1) REFERENCES Courses (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (courses_id2) REFERENCES Courses (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (courses_id3) REFERENCES Courses (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (courses_id4) REFERENCES Courses (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (courses_id5) REFERENCES Courses (id)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (note_one) REFERENCES notes_1 (id_note)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (note_two) REFERENCES notes_2 (id_note)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (note_three) REFERENCES notes_3 (id_note)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (note_four) REFERENCES notes_4 (id_note)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE,
+FOREIGN KEY (note_five) REFERENCES notes_5 (id_note)
+          ON DELETE CASCADE
+          ON UPDATE CASCADE
+);
+
+INSERT INTO students(id_,name_sur,group_id,courses_id1,note_one,courses_id2,note_two,courses_id3,note_three,courses_id4,note_four,courses_id5,note_five)
+VALUES (1,'Роман Сидоренко', 1, 1, 1,2,1,3,1,4,1,5,1),
+(2,'Андрей Консевич', 1, 1, 1,2,1,3,1,4,1,5,1),
+(3,'Валерий Козленко', 1, 1, 1,2,1,3,1,4,1,5,1),
+(4,'Иван Иванов', 1, 1, 1,2,1,3,1,4,1,5,1),
+(5,'Владеслав Петров', 1, 1, 1,2,1,3,1,4,1,5,1),
+(6,'Екатерина Козачук', 1, 1, 1,2,1,3,1,4,1,5,1),
+(7,'Мария Мельник', 1, 1, 1,2,1,3,1,4,1,5,1),
+(8,'Дарья Цап', 1, 1, 1,2,1,3,1,4,1,5,1),
+(9,'Дмитрий Коваль', 1, 1, 1,2,1,3,1,4,1,5,1),
+(10,'Олег Иванов', 1, 1, 1,2,1,3,1,4,1,5,1),
+(11,'Богдан Макарчук', 2, 1, 1,2,1,3,1,4,1,5,1),
+(12,'Дмитрий Болгов', 2, 1, 1,2,1,3,1,4,1,5,1),
+(13,'Ростислав Семенюк', 2, 1, 1,2,1,3,1,4,1,5,1),
+(14,'Владислав Буршин', 2, 1, 1,2,1,3,1,4,1,5,1),
+(15,'Екатерина Василенко', 2, 1, 1,2,1,3,1,4,1,5,1),
+(16,'Ольга Кирпиченко', 2, 1, 1,2,1,3,1,4,1,5,1),
+(17,'Максим Михальчук', 2, 1, 1,2,1,3,1,4,1,5,1),
+(18,'Анастасия Ивлева', 2, 1, 1,2,1,3,1,4,1,5,1),
+(19,'Артем Бобенко', 2, 1, 1,2,1,3,1,4,1,5,1),
+(20,'Виталий Кузнецов', 2, 1, 1,2,1,3,1,4,1,5,1),
+(21,'Андрей Власенко', 3, 1, 1,2,1,3,1,4,1,5,1),
+(22,'Алина Геращенко', 3, 1, 1,2,1,3,1,4,1,5,1),
+(23,'Кристина Криворучко', 3, 1, 1,2,1,3,1,4,1,5,1),
+(24,'Анастасия Горбенко', 3, 1, 1,2,1,3,1,4,1,5,1),
+(25,'Полина Горовая', 3, 1, 1,2,1,3,1,4,1,5,1),
+(26,'Сергей Кузнецов', 3, 1, 1,2,1,3,1,4,1,5,1),
+(27,'Никита Филичкин', 3, 1, 1,2,1,3,1,4,1,5,1),
+(28,'Егор Дыркач', 3, 1, 1,2,1,3,1,4,1,5,1),
+(29,'Валерия Лукьянова', 3, 1, 1,2,1,3,1,4,1,5,1),
+(30,'Саша Сало', 3, 1, 1,2,1,3,1,4,1,5,1)
+
+
+
+
+
+SELECT s.id_, s.name_sur, s.group_id, n.name_of_group AS №_group
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = s.id_
+
+SELECT s.id_ AS №пп, s.name_sur AS ФИО, n.name_of_group AS №_группы, avg(notes_1.note) AS Оценка,notes_1.created_at AS Дата, Courses.name_sur AS Предмет, teachers.name_surname AS ФИО_преподавателя
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = group_id
+INNER JOIN notes_1 ON notes_1.id_student = s.id_
+INNER JOIN Courses ON Courses.Teachers_id = s.courses_id1
+INNER JOIN teachers ON teachers.id_teacher = Courses.Teachers_id
+WHERE Courses.name_sur LIKE 'Физика' AND s.name_sur LIKE 'Роман%'
+group by s.id_, notes_1.created_at, Courses.name_sur
+
+
+-----задание 1-------5 студентов с наибольшим средним баллом по всем предметам.
+
+SELECT s.id_ AS №пп, s.name_sur AS ФИО, n.name_of_group AS №_группы, (avg(notes_1.note)+avg(notes_2.note)+avg(notes_3.note)+avg(notes_4.note)+avg(notes_5.note))/5 AS Оценка
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = group_id
+INNER JOIN notes_1 ON notes_1.id_student = s.id_
+INNER JOIN notes_2 ON notes_2.id_student = s.id_
+INNER JOIN notes_3 ON notes_3.id_student = s.id_
+INNER JOIN notes_4 ON notes_4.id_student = s.id_
+INNER JOIN notes_5 ON notes_5.id_student = s.id_
+WHERE s.id_ IN (19,11,22,3,27)
+GROUP BY s.id_
+ORDER BY Оценка
+
+
+------задание 2------1 студент с наивысшим средним баллом по одному предмету.
+
+SELECT s.id_ AS №пп, s.name_sur AS ФИО, n.name_of_group AS №_группы, avg(notes_1.note) AS Оценка, Courses.name_sur AS Предмет
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = group_id
+INNER JOIN notes_1 ON notes_1.id_student = s.id_
+INNER JOIN Courses ON Courses.Teachers_id = s.courses_id1
+WHERE Courses.name_sur LIKE 'Физика' and s.id_ = 27
+GROUP BY s.id_, Courses.name_sur
+ORDER BY Оценка
+
+------Задание 3----------средний балл в группе по одному предмету.
+
+SELECT n.name_of_group AS №_группы, avg(notes_1.note) AS Оценка, Courses.name_sur AS Предмет
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = group_id
+INNER JOIN notes_1 ON notes_1.id_student = s.id_
+INNER JOIN Courses ON Courses.Teachers_id = s.courses_id1
+WHERE Courses.name_sur LIKE 'Физика' and n.name_of_group = 101
+GROUP BY Courses.name_sur, n.name_of_group
+
+------Задание 4---------Средний балл в потоке.
+
+SELECT avg(notes_1.note) AS Оценка, Courses.name_sur AS Предмет
+FROM students AS s
+INNER JOIN number_groups AS n ON n.id = group_id
+INNER JOIN notes_1 ON notes_1.id_student = s.id_
+INNER JOIN Courses ON Courses.Teachers_id = s.courses_id1
+WHERE Courses.name_sur LIKE 'Физика'
+GROUP BY Courses.name_sur
+
+------Задание5 ------- Какие курсы читает преподаватель.
+
+SELECT Courses.name_sur AS Название_курса, teachers.name_surname AS Преподаватель
+FROM Courses
+INNER JOIN teachers ON teachers.id_teacher = Courses.Teachers_id
+
+------задание 6---------Список студентов в группе.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы
+FROM students
+INNER JOIN number_groups ON number_groups.id = students.group_id
+WHERE number_groups.name_of_group = 101
+
+------задание 7 --------Оценки студентов в группе по предмету.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы, Courses.name_sur AS Предмет, notes_2.note AS Оценка, notes_2.created_at AS Дата
+FROM students
+INNER JOIN teachers
+INNER JOIN number_groups ON number_groups.id = students.group_id
+INNER JOIN Courses ON  Courses.Teachers_id = teachers.id_teacher
+INNER JOIN notes_2 ON notes_2.id_student = students.id_
+WHERE number_groups.name_of_group = 101 AND Courses.name_sur LIKE 'Сопромат'
+ORDER BY students.id_
+
+-----задание 8 ---------Оценки студентов в группе по предмету на последнем занятии.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы, Courses.name_sur AS Предмет, notes_2.note AS Оценка, notes_2.created_at AS Дата
+FROM students
+INNER JOIN teachers
+INNER JOIN number_groups ON number_groups.id = students.group_id
+INNER JOIN Courses ON  Courses.Teachers_id = teachers.id_teacher
+INNER JOIN notes_2 ON notes_2.id_student = students.id_
+WHERE number_groups.name_of_group = 101 AND Courses.name_sur LIKE 'Сопромат' and notes_2.id_note IN (4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108,112,116,120)
+ORDER BY students.id_
+
+-----задание 9 ----------Список курсов, которые посещает студент.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы, Courses.name_sur AS Предмет
+FROM students
+INNER JOIN teachers
+INNER JOIN number_groups ON number_groups.id = students.group_id
+INNER JOIN Courses ON  Courses.Teachers_id = teachers.id_teacher
+WHERE number_groups.name_of_group = 101 and students.name_sur LIKE 'Роман Сидоренко'
+ORDER BY students.id_
+
+-------задание 10 ----------Список курсов, которые студенту читает преподаватель.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы, Courses.name_sur AS Предмет, teachers.name_surname AS Преподаватель
+FROM students
+INNER JOIN teachers
+INNER JOIN number_groups ON number_groups.id = students.group_id
+INNER JOIN Courses ON  Courses.Teachers_id = teachers.id_teacher
+WHERE number_groups.name_of_group = 101 and students.name_sur LIKE 'Роман Сидоренко'
+ORDER BY students.id_
+
+--------задание 11 ---------- Средний балл, который преподаватель ставит студенту.
+
+SELECT students.id_ AS №пп, students.name_sur AS ФИО, number_groups.name_of_group AS Номер_группы, Courses.name_sur AS Предмет, teachers.name_surname AS Преподаватель, avg(notes_4.note) AS Средний_бал
+FROM students
+INNER JOIN teachers
+INNER JOIN notes_4 ON notes_4.id_student = students.id_
+INNER JOIN number_groups ON number_groups.id = students.group_id
+INNER JOIN Courses ON  Courses.Teachers_id = teachers.id_teacher
+WHERE number_groups.name_of_group = 101 and students.name_sur LIKE 'Роман Сидоренко' and Courses.name_sur LIKE 'Выс%'
+GROUP BY students.id_,Courses.name_sur,teachers.name_surname,number_groups.name_of_group
+
+-------задание 12 ----------Средний балл, который ставит преподаватель.
+
+SELECT Courses.name_sur AS Предмет, teachers.name_surname AS Преподаватель, avg(notes_2.note) AS Средний_бал
+FROM Courses
+INNER JOIN teachers
+INNER JOIN notes_2
+WHERE Courses.name_sur LIKE 'Химия' AND teachers.name_surname LIKE 'Мак%'
+GROUP BY Courses.name_sur, teachers.name_surname
+
+
+
